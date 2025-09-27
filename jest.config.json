@@ -1,0 +1,5 @@
+{
+  "transform": {
+  },
+  "reporters": ["default", "jest-sonar", "jest-teamcity"]
+}
