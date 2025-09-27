@@ -22,13 +22,17 @@ beforeEach(() => {
 });
 
 test('base64.encode', () => {
+    //act
     const result = encode("Hello World with Padding!");
+    //assert
     expect(mockBtoa).toHaveBeenCalledWith("Hello World with Padding!");
     expect(result).toBe('SGVsbG8gV29ybGQgd2l0aCBQYWRkaW5nIQ==');
 });
 
 test('base64.decode', () => {
+    //act
     const result = decode("SGVsbG8gV29ybGQgd2l0aCBQYWRkaW5nIQ==");
+    //assert
     expect(mockAtob).toHaveBeenCalledWith("SGVsbG8gV29ybGQgd2l0aCBQYWRkaW5nIQ==");
     expect(result).toBe('Hello World with Padding!');
 });
